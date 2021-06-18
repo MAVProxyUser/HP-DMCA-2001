@@ -1,0 +1,214 @@
+From: "KF" <dotslash@snosoft.com>
+To: "Ferson, Kent" <kent.ferson@hp.com>,
+	"ATD" <simon@snosoft.com>
+Cc: <recon@snosoft.com>,
+	"Metsch, James" <James.Metsch@hp.com>,
+	"Morse, Marjorie J" <Marjorie.Morse@hp.com>,
+	"Williams, Margaret D." <Meg.Williams@hp.com>,
+	"Cardos, David" <dave.cardos@hp.com>,
+	"Bennett, John \(BCS Marketing\)" <john.bennett@hp.com>,
+	<gil@snosoft.com>,
+	<brenda@zk3.dec.com>,
+	"Hogan, Joe \(Law\)" <joseph.hogan@hp.com>,
+	"Boren, Rich \(SSRT\)" <Rich.Boren@hp.com>,
+	"Ferson, Kent" <kent.ferson@hp.com>
+References: <6B003D25ADBDE347B5542AFE6A55B42E01E706EA@tayexc13.americas.cpqcorp.net>
+Subject: Re: Tru64 Security Audit Request (sitting on many serious issues)
+Date: Sat, 29 Jun 2002 21:22:24 -0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0026_01C21FB3.0FB40BE0";
+	type="text/plain"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.50.4522.1200
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4522.1200
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0026_01C21FB3.0FB40BE0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 8bit
+
+Guys I also read over your response again and wanted to make one point in
+particular clear...
+> ...system and your expressed intention to begin releasing proof of concept
+code/binaries and advisories relating to this alleged >vulnerability at
+5:00pm on June 26, 2002 unless Compaq enters into a consulting agreement
+with SnoSoft.
+
+I believe the above misunderstanding is why you have chosen to escalate to
+this point...  we already were scheduled for release of information
+regardless of if you decided to work with us or not. Please understand we as
+a company offer source code audits and penetration testing we try to solicit
+this where ever possible. We also support Full disclosure of security
+research. We do give vendors a chance to indefinately purchase the
+information from us so that it becomes their intellectual property, however
+if a vendor chooses not to take this opportunity we will follow the Industry
+standard for disclosure of somputer security holes. Examples include the
+method devised by "Rain Forrest Puppy" from wiretap. A "heads up" advisory
+will be given so that you have time to provide a work around, CERT will be
+notified and perhaps a responsible disclosure routine will be enacted
+through CERT.
+
+I believe the reason a date was given to you was so that this info did not
+catch you off gaurd... it was my understanding that our companies had been
+in some form of contact for several months ... I was under the impression
+from some of the responses to previous emails that you actually did wish to
+work with us. We choose to with hold alot of information from the general
+public in hopes that you actually wanted to work with us. I think you
+actually know this is the case...
+
+It is kind of funny how this timeline plays out ... lets review.... the
+mailing lists begin talking about how to bypass the non-executable stack...
+sometime within that timeframe we contact you with our concerns and offers
+to audit... no earth moving response from you comes along... AFTER we let
+you know we were sitting on a few things still no real response to if you do
+or do not want to work with us... then we decide to disclose a couple issues
+to the public because we have been sitting on them entirely too long... at
+the time we were not sure that they were exploitable. We were not sure
+inlight of the talks a few weeks earlier about how people thought your
+non-exec could NOT be bypassed... we ourselves were supporters of the fact
+that it could not be done. IMMEDIATELY there after you release a bunch of
+issues to the public ... oddly enough you knocked quite a bit of our
+possible research (that we let you know about ) out of the water...  Below
+are a few examples of what I am talking about ....
+
+      To: Vuln-Dev
+      Subject: TRU64 /usr/sbin/quot overflow
+      Date: May 21 2002 2:57AM
+      Author: KF <dotslash@snosoft.com>
+      Message-ID: <3CE9B77D.6000103@snosoft.com>
+again ... in light of the non-exec stack talks I am releasing some info
+I have been sitting on...
+
+alpha.snosoft.com> uname -a
+OSF1 alpha.snosoft.com V5.1 732 alpha
+alpha.snosoft.com> id
+uid=201(dotslash) gid=15(users) groups=0(system)
+alpha.snosoft.com> ls -al  /usr/sbin/quot
+-rwx--s--x   1 bin      mem        32832 Aug 24  2000 /usr/sbin/quot
+alpha.snosoft.com>  /usr/sbin/quot
+quot: root_domain#root: Permission denied
+alpha.snosoft.com> /usr/sbin/quot `perl -e 'print "A" x 9000'`
+Memory fault
+
+
+Heres the funny time line I speak of ....
+
+
+
+
+
+Tru64 UNIX CDE, NFS and NIS related Potential Security Vulnerabilities
+(Advisories)
+   url: http://www.securityfocus.com/advisories/4144
+   Last modified on: 2002-05-22
+
+TRU64 /bin/chsh overflow (Archive)
+   url: http://www.securityfocus.com/archive/82/273532
+   Last modified on: 2002-05-21
+
+TRU64 /usr/bin/passwd overflow (Archive)
+   url: http://www.securityfocus.com/archive/82/273526
+   Last modified on: 2002-05-21
+
+TRU64 /usr/sbin/quot overflow (Archive)
+   url: http://www.securityfocus.com/archive/82/273519
+   Last modified on: 2002-05-21
+
+Re: Exploiting Buffer Overflows on Compaq Tru64 and No-Exec Stack (Archive)
+   url: http://www.securityfocus.com/archive/82/272916
+   Last modified on: 2002-05-17
+
+Re: Exploiting Buffer Overflows on Compaq Tru64 and No-Exec Stack (Archive)
+   url: http://www.securityfocus.com/archive/82/272912
+   Last modified on: 2002-05-17
+
+.... (several researchers commented on this saying it was not possible)
+
+
+So the below assumption that we were going to "start" releasing some of this
+information "unless Compaq enters into a consulting agreement with SnoSoft"
+is simply a misunderstanding... we had already begun the disclosure process.
+We have already been openly talking about it with the bugtraq community long
+before you decided you did not wish to work with us.
+
+To make it clear once again the below letter is the First time you have made
+it known to us that you do not wish our services in helping you secure your
+OS nor do you wish to pay us to with hold any of our research from the
+public eye. After recieving the below letter we have agreed to no longer
+"solicit" our services.
+
+Having that out of the way ... we will have to discuss with CERT the proper
+method for handeling this situation... the date of the 26th was already
+being pushed back due to other items on our plate, however inlight of your
+sudden hostility twords us this date has been suspended indefinately pending
+any sort of disclosure procedures that CERT deems necessary. Also due to the
+government usage of TRU64 in situations which they feel the machines are
+safe from attack (because of the non-execuatable stack) we may also
+coordinate with NIPC.
+
+-KF
+
+June 21, 2002
+
+
+
+By Electronic and Certified Mail
+
+Adriel T. Desautels
+
+Secure Network Operations, Inc.
+
+D/B/A SnoSoft
+
+5 Oak Ridge Drive, Apt. # 2
+
+Maynard, MA 01754
+
+Re: Tru64 UNIX
+
+Dear Mr. Desautels:
+
+I am writing in response to your claim that SnoSoft has discovered a means
+of bypassing the non-executable stack on the Tru64 Unix operating system and
+your expressed intention to begin releasing proof of concept code/binaries
+and advisories relating to this alleged vulnerability at 5:00pm on June 26,
+2002 unless Compaq enters into a consulting agreement with SnoSoft. Although
+we encourage our customers and other members of the UNIX community to bring
+potential bugs to our attention, we do not compensate third parties for
+bringing such bugs to our attention or for keeping them a secret.
+
+Please be advised that SnoSoft's releasing of such information, together
+with SnoSoft's activities to date, could constitute criminal conduct under
+both the Massachusetts extortion statute (M.G.L. c. 265 § 25) and the
+federal Computer Fraud and Abuse Act. It could also expose SnoSoft to civil
+liability for damages suffered by Compaq and its customers. If SnoSoft were
+to post this information as planned, Compaq would have no choice but to
+evaluate its options to preserve and protect its assets, including potential
+legal action against SnoSoft and referring this matter to the Office of the
+United States Attorney as well as the local District Attorney for criminal
+prosecution.
+
+Please confirm that SnoSoft will refrain from publishing this information.
+
+Regards,
+
+
+
+
+
+
+
+
+------=_NextPart_000_0026_01C21FB3.0FB40BE0
+Content-Type: image/gif;
+	name="1x1_spacer.gif"
+Content-Transfer-Encoding: base64
+Content-Location: http://online.securityfocus.com/sfonline/images/build/1x1_spacer.gif
+
+R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_0026_01C21FB3.0FB40BE0--

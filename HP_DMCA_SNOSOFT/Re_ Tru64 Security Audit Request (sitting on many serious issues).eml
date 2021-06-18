@@ -1,0 +1,156 @@
+From: "KF" <dotslash@snosoft.com>
+To: "Ferson, Kent" <kent.ferson@hp.com>,
+	"ATD" <simon@snosoft.com>
+Cc: <recon@snosoft.com>,
+	"Metsch, James" <James.Metsch@hp.com>,
+	"Morse, Marjorie J" <Marjorie.Morse@hp.com>,
+	"Williams, Margaret D." <Meg.Williams@hp.com>,
+	"Cardos, David" <dave.cardos@hp.com>,
+	"Bennett, John \(BCS Marketing\)" <john.bennett@hp.com>,
+	<gil@snosoft.com>,
+	<brenda@zk3.dec.com>,
+	"Hogan, Joe \(Law\)" <joseph.hogan@hp.com>,
+	"Boren, Rich \(SSRT\)" <Rich.Boren@hp.com>,
+	"Ferson, Kent" <kent.ferson@hp.com>
+References: <6B003D25ADBDE347B5542AFE6A55B42E01E706EA@tayexc13.americas.cpqcorp.net>
+Subject: Re: Tru64 Security Audit Request (sitting on many serious issues)
+Date: Sat, 29 Jun 2002 19:37:34 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.50.4522.1200
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4522.1200
+
+To whom it may concern,
+
+Applying this law to this situation implies that we are attempting to make
+(Compaq) do something against their own will. If I remember correctly Compaq
+never flat out told us "No SnoSoft we do not with to work with you". Based
+on that it is not entirely clear to me when it was established just what
+exactly the "Will of Compaq" was. If Compaq has "Determined its will" on
+this issue it would have been nice of them to communicate it with us
+effectively. If we were to continue to offer our assistance or attempt to
+force our assistance AFTER which we were told that our assistance was not
+needed or wanted THEN and only THEN can I see this as "going against their
+will". If you act like you will work with someone and then just don't say
+anything to them for a few weeks ... one should expect another attempt at
+communication (hence our multiple attempts). If the will of Compaq was never
+identified to us then this can hardly be used as a point of argument.
+
+Another portion implies "malicious intent" to injur property or a person...
+plain and simple there were NO threats made against any individual or
+property intellectual or otherwise. We have in no way added any threat
+factor to Compaq ... the conditions by which their operating system is
+vulnerable were not introduced by us. By disclosing information about a
+vulnerability in their operating system we in no way "Damage" the TRU64
+OS... it is already broken. We are simply pointing out where it is broken.
+
+If I were the person that pointed out that Firestone tires on the Ford
+explorer are the cause of serious wrecks I would not be accused of making
+the ride in a Ford
+explorer any less safe... nor would I be accused of acting "maliciously"
+twords Ford Motor company. I would have simply pointed out a serious issue
+to the public so that they may protect themselves.
+
+The only reason we inquired about a contract is because your operating
+system has countless suid applications and your staff seems to think that
+they can hide behind the non executable stack and just brush the security
+issues under the rug. The fact that your operating system contains these
+security issues and the fact that we are good at finding security issues is
+the only reason we even attempted to contact you. The majority of this
+research was done prior to contacting you ... and the fact that we were
+attempting to talk about a contract did not influence the work we had
+already done. One side effect of the research we had already done was that
+we discovered that your non-executable stack was worthless.
+
+We were NOT offering to "sell" you our "exploits" nor were we offering to
+sell you "the means by which to bypass the non-executable stack" we were
+simply proposing to you that we work on future releases and help to secure
+the state of your OS as it stands now and how it presents itself in the
+future. The fact that we bypassed your stack is besides the point...people
+disclose security holes all the time. The information we found was scheduled
+for release the the public regardless of if you choose to work with us on
+future issues of not. The fact that we had bypassed your stack did however
+make several of your existing practices (like leaving suids all over the
+place) a little more of a concern which is why we contacted you.
+
+We are not attempting to slander your company in anyway nor are we
+attempting to tarnish your reputation because you choose not to work with
+us. We never implied that we wished to harm you in any way shape or form nor
+did we imply that we wished to harm any of your property or staff. We simply
+wanted to help in an area that you seem to lack.... computer security.
+
+Based on your previous email Snosoft as a company will now assume that "The
+will of Compaq" is to NOT work with Snosoft in securing the TRU64 os. So at
+this point in time we will make NO further requests for any contract work...
+because you have NOW made it clear that you do not want our assistance.
+
+Our intellectual property (research) however still remains to be ours and we
+will release the information as we see fit. NONE of the information we
+release was in any way shape or form a part of the proposed contract work
+because that information was not "For sale" to begin with. The only thing
+for sale and the only service we wished to offer you was an Audit of the
+current state of your security and our proposed solutions to the issues at
+hand.
+
+-KF
+
+
+GENERAL LAWS OF MASSACHUSETTS
+PART IV.
+CRIMES, PUNISHMENTS AND PROCEEDINGS IN CRIMINAL CASES.
+
+----------------------------------------------------------------------------
+----
+
+TITLE I.
+CRIMES AND PUNISHMENTS.
+
+----------------------------------------------------------------------------
+----
+
+CHAPTER 265. CRIMES AGAINST THE PERSON.
+
+Chapter 265: Section 25. Attempted extortion; punishment.
+
+Section 25. Whoever, verbally or by a written or printed communication,
+maliciously threatens to accuse another of a crime or offence, or by a
+verbal or written or printed communication maliciously threatens an injury
+to the person or property of another, or any police officer or person having
+the powers of a police officer, or any officer, or employee of any licensing
+authority who verbally or by written or printed communication maliciously
+and unlawfully uses or threatens to use against another the power or
+authority vested in him, with intent thereby to extort money or any
+pecuniary advantage, or with intent to compel any person to do any act
+against his will, shall be punished by imprisonment in the state prison for
+not more than fifteen years, or in the house of correction for not more than
+two and one half years, or by a fine of not more than five thousand dollars,
+or both.
+
+
+
+
+
+----- Original Message -----
+From: "Ferson, Kent" <kent.ferson@hp.com>
+To: "ATD" <simon@snosoft.com>
+Cc: <recon@snosoft.com>; "Metsch, James" <James.Metsch@hp.com>; "Morse,
+Marjorie J" <Marjorie.Morse@hp.com>; "Williams, Margaret D."
+<Meg.Williams@hp.com>; "Cardos, David" <dave.cardos@hp.com>; "Bennett, John
+(BCS Marketing)" <john.bennett@hp.com>; <gil@snosoft.com>;
+<brenda@zk3.dec.com>; "Hogan, Joe (Law)" <joseph.hogan@hp.com>; "Boren, Rich
+(SSRT)" <Rich.Boren@hp.com>; "Ferson, Kent" <kent.ferson@hp.com>
+Sent: Monday, June 24, 2002 3:03 PM
+Subject: RE: Tru64 Security Audit Request (sitting on many serious issues)
+
+
+Adriel,
+
+I've attached our formal response to your request.
+
+Kent...
+
+
